@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      #game-container {
+        width: 500px;
+        height: 500px;
+        background-color: lightgray;
+        position: relative;
+      }
+      #player {
+        width: 50px;
+        height: 50px;
+        background-color: red;
+        position: absolute;
+        bottom: 0;
+        left: 50px;
+      }
+      #obstacle {
+        width: 50px;
+        height: 50px;
+        background-color: blue;
+        position: absolute;
+        bottom: 0;
+        right: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="game-container">
+      <div id="player"></div>
+      <div id="obstacle"></div>
+    </div>
+  </body>
+  <script src="game.js"></script>
+</html>
