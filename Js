@@ -1,0 +1,20 @@
+const player = document.getElementById("player");
+const obstacle = document.getElementById("obstacle");
+let playerX = 50;
+let playerSpeed = 5;
+
+function update() {
+  playerX = playerX + playerSpeed;
+  player.style.left = playerX + "px";
+  
+  if (playerX + player.offsetWidth > obstacle.offsetLeft && 
+      playerX < obstacle.offsetLeft + obstacle.offsetWidth && 
+      player.offsetTop + player.offsetHeight > obstacle.offsetTop) {
+    alert("Game Over");
+    playerSpeed = 0;
+  }
+  
+  requestAnimationFrame(update);
+}
+
+update();
